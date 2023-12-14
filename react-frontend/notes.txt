@@ -1,0 +1,19 @@
+start springboot project first
+create schema employee_management_system in mysql
+
+ npm install
+ npm install bootstrap --save
+ npm install react-router-dom
+ npm install react-router-dom@5.2.0   //Switch
+ npm i axios
+ npm audit fix --force
+
+
+index.js
+
+ ReactDOM.render(
+  // <React.StrictMode>
+     <App />,
+  // </React.StrictMode>,
+  document.getElementById('root')
+);
