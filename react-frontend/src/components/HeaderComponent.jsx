@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import logo from '../pics/git.jpg';
+import '../css/header.css';
 
 class HeaderComponent extends Component {
     constructor(props) {

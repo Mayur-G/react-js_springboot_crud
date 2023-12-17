@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../App.css';
 import EmployeeService from '../services/EmployeeService'
 
 class ViewEmployeeComponent extends Component {

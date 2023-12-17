@@ -9,6 +9,10 @@ import CreateEmployeeComponent from './components/CreateEmployeeComponent';
 import UpdateEmployeeComponent from './components/UpdateEmployeeComponent';
 import ViewEmployeeComponent from './components/ViewEmployeeComponent';
 import PaginationDemo from './components/PaginationDemo';
+import FileUploader from './components/FileUploader';
+import NextPageComponent from './components/NextPageComponent';
+import Register from './components/Register';
+import Login from './components/Login';
 
 
 function App() {
@@ -18,11 +22,13 @@ function App() {
               <HeaderComponent />
                 <div className="container">
                      <Switch>  
-                          {/* <Route path="/register" component= { <Register/>} />
-                           <Route path="/" exact component= { <Login/>} /> */}
-                          <Route path = "/" exact component = {ListEmployeeComponent}></Route> 
+                          <Route path="/register" component= {Register}></Route> 
+                           <Route path="/" exact component= {Login}></Route>                       
+                          <Route path = "/list" exact component = {ListEmployeeComponent}></Route> 
+                          <Route path ="/next" component ={NextPageComponent}></Route>
                           <Route path = "/page" component = {PaginationDemo}></Route> 
                           <Route path = "/employees" component = {ListEmployeeComponent}></Route>
+                          <Route path = "/upload" component = {FileUploader}></Route>
                           <Route path = "/add-employee/:id" component = {CreateEmployeeComponent}></Route>
                           <Route path = "/view-employee/:id" component = {ViewEmployeeComponent}></Route>
                           {/* <Route path = "/update-employee/:id" component = {UpdateEmployeeComponent}></Route> */}

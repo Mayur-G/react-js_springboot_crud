@@ -7,7 +7,9 @@ import org.springframework.stereotype.Repository;
 
 import mayur.demo.springboot.model.Employee;
 
+
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee, Long>{
 
+	 
 }

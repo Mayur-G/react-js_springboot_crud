@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import '../css/footer.css';
 
 class FooterComponent extends Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class FooterComponent extends Component {
                 <br></br>
                 <footer className = "footer">
                     {/* <span className="text-muted">All Rights Reserved 2020 @JavaGuides</span> */}
-                    <div class="container bottom_border">
+                    <div class="container-bottom_border">
                         <div class="row">
                         <div class=" col-sm-4 col-md col-sm-4">
                         <h5 class="headin5_amrc col_white_amrc pt2">Find us</h5>
@@ -68,7 +69,7 @@ class FooterComponent extends Component {
                         </div>
 
 
-                        <div class="container">
+                        <div class="container_footer">
                         <ul class="foote_bottom_ul_amrc">
                         <li><a href="http://webenlance.com">Home</a></li>
                         <li><a href="http://webenlance.com">About</a></li>

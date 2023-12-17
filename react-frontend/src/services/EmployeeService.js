@@ -23,6 +23,22 @@ class EmployeeService {
     deleteEmployee(employeeId){
         return axios.delete(EMPLOYEE_API_BASE_URL + '/' + employeeId);
     }
+
+    uploadEmployee(formData) {
+        const uploadUrl = `${EMPLOYEE_API_BASE_URL}/upload`;
+        return axios.post(uploadUrl, formData);
+    }
+
+    registerEmployee(employeeData) {
+        const registerUrl = `${EMPLOYEE_API_BASE_URL}/register`;
+        return axios.post(registerUrl, employeeData);
+    }
+
+    loginEmployee(employeeData) {
+        const registerUrl = `${EMPLOYEE_API_BASE_URL}/login`;
+        return axios.post(registerUrl, employeeData);
+    }
+
 }
 
 export default new EmployeeService()

@@ -1,3 +1,5 @@
+import '../css/paginate.css';
+import '../index.css';
 import React, { Component } from 'react'
 import {useState} from 'react'
 import EmployeeService from '../services/EmployeeService'
@@ -5,13 +7,12 @@ import axios from 'axios'
 import ReactPaginate from 'react-paginate';
 
 class ListEmployeeComponent extends Component {
-
+  
     constructor(props) {
         super(props)
 
         this.state = {
             employees: [],
-
             data: [], // Your data array
             pageCount: 0,
             perPage: 5, // Number of items per page
@@ -44,13 +45,20 @@ class ListEmployeeComponent extends Component {
         });
     }
 
-    handlePageClick = ({ selected }) => {
-        this.setState({ currentPage: selected });
-    };
+    
 
     addEmployee(){
         this.props.history.push('/add-employee/_add');
     }
+
+    handlePageClick = ({ selected }) => {
+        this.setState({ currentPage: selected });
+      };
+
+      handleNextClick = () => {
+            // Access the history object and push the new route
+            this.props.history.push('/next');
+          };
 
     render() {
         const { data, perPage, currentPage, pageCount } = this.state;
@@ -58,7 +66,7 @@ class ListEmployeeComponent extends Component {
         // Calculate the start and end index for the current page
         const startIndex = currentPage * perPage;
         const endIndex = startIndex + perPage;
-    
+      
         // Slice the data array based on the current page
         const currentData = data.slice(startIndex, endIndex);
 
@@ -68,6 +76,7 @@ class ListEmployeeComponent extends Component {
                  <h2 className="text-center">Employees List</h2>
                  <div className = "row">
                     <button className="btn btn-primary" onClick={this.addEmployee}> Add Employee</button>
+                    <button className="btn btn-primary" onClick={this.handleNextClick}>Next</button>
                  </div>
                  <br></br>
                  <div className = "row">

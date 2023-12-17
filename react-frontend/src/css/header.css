@@ -1,0 +1,45 @@
+/*Header start */
+.main{
+    padding: 0;
+    margin:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 20px;
+    background-color: rgb(187, 127, 59);
+  }
+  
+  .gitImage{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 8px;
+  }
+  
+  .sub-main ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .sub-main ul li a{
+    color: white;
+    font-weight: bold;
+  }
+  
+  .main button{
+    width: 100px;
+    border: none;
+    border-radius: 30px;
+    background-color: black;
+    color: white;
+  }
+  
+  .main h2{
+    color: white;
+    font-weight: bold;
+  }
+  /*Header end */
